@@ -1,5 +1,3 @@
-SERVICE
-=======
 [Unit]
 Description=Apply CAKE Smart Queue Management to fix Bufferbloat
 After=network.target
