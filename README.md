@@ -22,3 +22,7 @@ It currently applies to wlo1, find your network interface with `ip link show
   3.  `sudo systemctl daemon-reload`
 
   If you change the script's path change the path on the service too.
+
+  ##TODO
+  1. To be able to un-apply the settings
+  2. Fix the hotspot part
