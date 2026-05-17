@@ -1,0 +1,13 @@
+SERVICE
+=======
+[Unit]
+Description=Apply CAKE Smart Queue Management to fix Bufferbloat
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix-bufferbloat.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
