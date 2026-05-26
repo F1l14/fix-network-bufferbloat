@@ -1,11 +1,21 @@
 [Unit]
-Description=Apply CAKE Smart Queue Management to fix Bufferbloat
-After=network.target
+Description=Apply CAKE Smart Queue Management to wlo1
+# Wait for the network stack and specifically the wlo1 device
+After=network.target sys-subsystem-net-devices-wlo1.device
+Wants=network-online.target
+BindsTo=sys-subsystem-net-devices-wlo1.device
 
 [Service]
-Type=oneshot
+Type=simple
+ExeStartPre=/usr/bin/sleep 2
 ExecStart=/usr/local/bin/fix-bufferbloat.sh
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=sys-subsystem-net-devices-wlo1.device
+
+
+
+
+
+

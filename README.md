@@ -2,7 +2,7 @@
 A script to implement the CAKE smart queue management algorithm on linux to solve network bufferbloat.
 
 It currently applies to wlo1, find your network interface with `ip link show
-` and change it on the script file accordingly. The download & upload cap is set for 100Mb/s down 10Mbit/s up connection, feel free to change the settings for you connection.
+` and change it on the script file and the service file accordingly. The download & upload cap is set for 100Mb/s down 10Mbit/s up connection, feel free to change the settings for you connection.
 
 ## Script
   1. Resets any existing traffic trontrol in queue.
